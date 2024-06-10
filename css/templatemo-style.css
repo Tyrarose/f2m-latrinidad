@@ -1,8 +1,8 @@
+* {
+	/* border: 1px red solid; */
+}
 /*
 
-Elegance Template
-
-https://templatemo.com/tm-528-elegance
 
 ==================================================
 CSS SITEMAP >>>>
@@ -135,29 +135,31 @@ figure {
 
 video {
 	position: fixed;
-	right: 0;
+	left: 0;
 	bottom: 0;
 	min-width: 100%;
 	min-height: 100%;
+	transform: scale(1.5);
+	transform: scaleX(-1);
 }
 #video:after {
 	content: "";
-	opacity: 0.85;
-	background: #3b6320cc; /* Old browsers */
+	opacity: 0.95;
+	background: #234b0acc; /* Old browsers */
 	background: -moz-linear-gradient(
 		top,
-		#3b6320cc 0%,
-		#3b6320cc 100%
+		#234b0acc 0%,
+		#234b0acc 100%
 	); /* FF3.6-15 */
 	background: -webkit-linear-gradient(
 		top,
-		#3b6320cc 0%,
-		#3b6320cc 100%
+		#183605cc 0%,
+		#183605cc 100%
 	); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(
 		to bottom,
-		#3b6320cc 0%,
-		#3b6320cc 100%
+		#234b0acc 0%,
+		#234b0acc 100%
 	); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#428713cc', endColorstr='#428713cc',GradientType=0 ); /* IE6-9 */
 	position: fixed;
@@ -430,7 +432,9 @@ a#logo {
 .welcome-box {
 	font-size: 20px;
 	line-height: 1.7;
+	text-align: left;
 }
+
 .welcome-first {
 	font-size: 32px;
 	display: block;
@@ -442,7 +446,7 @@ a#logo {
 .welcome-box p {
 	max-width: 620px;
 	width: 100%;
-	margin: 0 auto 30px;
+	/* margin: 0 auto 30px; */
 	color: #fff;
 }
 .welcome-title {

@@ -142,7 +142,7 @@ video {
 }
 #video:after {
 	content: "";
-	opacity: 0.75;
+	opacity: 0.5;
 	background: #428713cc; /* Old browsers */
 	background: -moz-linear-gradient(
 		top,

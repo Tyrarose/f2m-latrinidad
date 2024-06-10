@@ -142,22 +142,22 @@ video {
 }
 #video:after {
 	content: "";
-	opacity: 0.5;
-	background: #428713cc; /* Old browsers */
+	opacity: 0.85;
+	background: #3b6320cc; /* Old browsers */
 	background: -moz-linear-gradient(
 		top,
-		#428713cc 0%,
-		#428713cc 100%
+		#3b6320cc 0%,
+		#3b6320cc 100%
 	); /* FF3.6-15 */
 	background: -webkit-linear-gradient(
 		top,
-		#428713cc 0%,
-		#428713cc 100%
+		#3b6320cc 0%,
+		#3b6320cc 100%
 	); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(
 		to bottom,
-		#428713cc 0%,
-		#428713cc 100%
+		#3b6320cc 0%,
+		#3b6320cc 100%
 	); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#428713cc', endColorstr='#428713cc',GradientType=0 ); /* IE6-9 */
 	position: fixed;

@@ -198,4 +198,8 @@
 
 const currentYear = new Date().getFullYear();
 document.getElementById("footer-text").innerHTML =
-	`&copy; ${currentYear} Farm to Market La Trinidad - Developed by <a href="https://www.linkedin.com/in/tyraclemente/" target="_blank">Tyra Generose</a>`;
+	`&copy; ${currentYear} Farm to Market La Trinidad - 
+	Designed and Developed by 
+	<a href="https://www.linkedin.com/in/tyraclemente/" target="_blank" style="text-decoration: underline;"> Tyra </a> 
+	with 
+	<a href="https://www.linkedin.com/in/tyraxl-joe-sabino-35666929b/" target="_blank" style="text-decoration: underline;">Tyraxl</a>`;

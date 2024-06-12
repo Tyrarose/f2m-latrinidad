@@ -260,6 +260,10 @@ CSS SITEMAP >>>>
 	#navigation button i {
 		color: white;
 	}
+
+	.logoimg {
+		width: 10vh;
+	}
 	.welcome-box {
 		padding: 0px;
 	}

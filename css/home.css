@@ -324,7 +324,7 @@ video {
 02. HEADER CSS
 ================================================*/
 #header {
-	padding: 20px 0;
+	/* padding: 20px 0; */
 	position: fixed;
 	left: 0;
 	right: 0;
@@ -343,14 +343,8 @@ a#logo {
 
 /* Default for larger screens */
 .logoimg {
-	width: 100px;
-}
-
-/* For tablets and mobile screens */
-@media (max-width: 768px) {
-	.logoimg {
-		width: 8vh;
-	}
+	width: 13vh;
+	padding: 10px;
 }
 
 .navbar {
@@ -364,6 +358,13 @@ a#logo {
 	-webkit-flex-direction: row;
 	flex-direction: row;
 }
+
+.container-blur {
+	backdrop-filter: blur(5px);
+	background-color: rgba(255, 255, 255, 0.015);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
 .navbar-nav li {
 	margin-left: 30px;
 }

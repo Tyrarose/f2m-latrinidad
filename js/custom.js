@@ -27,6 +27,7 @@
 			}
 		}
 	};
+
 	$(document).ready(function () {
 		$(window).on("load", function () {
 			$(".preloader").fadeOut();
@@ -111,64 +112,11 @@
 				},
 			});
 		}
-		if ($(".gallery-list").length) {
-			$(".gallery-list").owlCarousel({
-				loop: false,
-				nav: false,
-				dots: true,
-				items: 3,
-				autoplay: true,
-				smartSpeed: 700,
-				autoplayTimeout: 4000,
-				responsive: {
-					0: {
-						items: 1,
-						margin: 0,
-					},
-					576: {
-						items: 2,
-						margin: 20,
-					},
-					992: {
-						items: 3,
-						margin: 30,
-					},
-				},
-			});
-		}
-		if ($(".testimonials-slider").length) {
-			$(".testimonials-slider").owlCarousel({
-				loop: true,
-				nav: false,
-				dots: true,
-				items: 1,
-				margin: 30,
-				autoplay: true,
-				smartSpeed: 700,
-				autoplayTimeout: 6000,
-				responsive: {
-					0: {
-						items: 1,
-						margin: 0,
-					},
-					768: {
-						items: 1,
-					},
-				},
-			});
-		}
 		if ($(".fullpage-default").length) {
 			var myFullpage = new fullpage(".fullpage-default", {
-				licenseKey: " C7F41B00-5E824594-9A5EFB99-B556A3D5",
-				anchors: [
-					"slide01",
-					"slide02",
-					"slide03",
-					"slide04",
-					"slide05",
-					"slide06",
-					"slide07",
-				],
+				licenseKey: "C7F41B00-5E824594-9A5EFB99-B556A3D5",
+				anchors: [],
+				lockAnchors: true,
 				menu: "#nav",
 				lazyLoad: true,
 				navigation: true,
@@ -179,6 +127,7 @@
 				responsiveSlides: true,
 			});
 		}
+
 		$(document)
 			.on("click", ".navbar-toggle", function () {
 				$(".navbar-collapse").slideToggle(300);
@@ -223,5 +172,30 @@
 			.on("click", ".side-menu .navbar-nav li a", function () {
 				$("body").removeClass("sidemenu-open");
 			});
+		// Add your counter animation script here
+		$(window).scroll(function () {
+			if (visible($(".count-digit"))) {
+				if ($(".count-digit").hasClass("counter-loaded")) return;
+				$(".count-digit").addClass("counter-loaded");
+
+				$(".count-digit").each(function () {
+					var $this = $(this);
+					jQuery({ Counter: 0 }).animate(
+						{ Counter: $this.text() },
+						{
+							duration: 3000,
+							easing: "swing",
+							step: function () {
+								$this.text(Math.ceil(this.Counter));
+							},
+						}
+					);
+				});
+			}
+		});
 	});
 })(jQuery, window, document);
+
+const currentYear = new Date().getFullYear();
+document.getElementById("footer-text").innerHTML =
+	`&copy; ${currentYear} Farm to Market La Trinidad - Developed by <a href="https://www.linkedin.com/in/tyraclemente/" target="_blank">Tyra Generose</a>`;

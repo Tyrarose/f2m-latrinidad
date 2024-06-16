@@ -443,7 +443,7 @@ a#logo {
 .custom-bg-pic-color {
 	background-image: url("/images/videos-bg.jpg");
 
-	background: linear-gradient(rgba(0, 128, 0, 0.5), rgba(0, 128, 0, 0.5)),
+	background: linear-gradient(#193b04cc, #193b04cc),
 		url("/images/videos-bg.jpg");
 
 	background-size: cover;

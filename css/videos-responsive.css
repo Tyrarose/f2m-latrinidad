@@ -26,6 +26,10 @@ CSS SITEMAP >>>>
 		display: block !important;
 		height: auto !important;
 	}
+	.featured-container iframe {
+		max-width: 100%;
+		height: 400px;
+	}
 }
 
 /*==============================================
@@ -34,6 +38,10 @@ CSS SITEMAP >>>>
 @media only screen and (min-width: 1440px) {
 	.about-pic-above-text {
 		display: none;
+	}
+	.featured-container iframe {
+		max-width: 100%;
+		height: 550px;
 	}
 }
 
@@ -106,7 +114,9 @@ CSS SITEMAP >>>>
 	.about-pic-above-text {
 		display: none;
 	}
-	.about-pic-right {
+	.featured-container iframe {
+		max-width: 100%;
+		height: 550px;
 	}
 }
 
@@ -248,6 +258,10 @@ CSS SITEMAP >>>>
 	.contact-row {
 		padding: 42px 45px;
 	}
+	.featured-container iframe {
+		max-width: 100%;
+		height: 450px;
+	}
 }
 
 /*==============================================
@@ -376,6 +390,10 @@ CSS SITEMAP >>>>
 	.about-pic-right {
 		display: none;
 	}
+	.featured-container iframe {
+		max-width: 100%;
+		height: 390px;
+	}
 }
 
 /*==============================================
@@ -457,11 +475,6 @@ CSS SITEMAP >>>>
 	.testimonial-content:before {
 		left: 45%;
 	}
-
-	.video-container iframe {
-		max-width: 100%;
-		height: 380px;
-	}
 }
 @media only screen and (max-width: 320px) {
 	.gallery-overlay p {
@@ -469,9 +482,5 @@ CSS SITEMAP >>>>
 	}
 	.testimonial-content:before {
 		left: 43%;
-	}
-	.video-container iframe {
-		max-width: 100%;
-		height: 380px;
 	}
 }

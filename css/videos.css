@@ -510,7 +510,7 @@ a#logo {
 
 .featured-container iframe {
 	max-width: 100%;
-	height: 550px;
+	border: 1px red dotted;
 }
 
 /*==============================================

@@ -511,7 +511,6 @@ a#logo {
 .featured-container iframe {
 	max-width: 100%;
 	height: 550px;
-	border: 1px red dotted;
 }
 
 /*==============================================
@@ -519,7 +518,7 @@ Old videos BLOCK CSS
 ================================================*/
 
 .slide-two {
-	background-color: rgb(142, 192, 142);
+	background-color: rgb(167, 199, 171);
 }
 
 .slide-two > * {

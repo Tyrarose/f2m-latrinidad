@@ -5,9 +5,11 @@
 CSS SITEMAP >>>>
 
   01. Small tablets and up (e.g., iPads in portrait mode and larger).
+
   02. Large desktops and smaller (e.g., standard desktop monitors, laptops).
   03. Standard desktops and smaller (e.g., most laptops, large tablets in landscape mode).
   04. Small desktops and smaller (e.g., smaller laptops, tablets in landscape mode).
+ 
   05. Tablets and smaller (e.g., tablets in portrait mode, large smartphones in landscape mode).
   06. Large smartphones and smaller (e.g., most smartphones in portrait mode).
   07. Small smartphones and smaller (e.g., smaller smartphones).
@@ -29,6 +31,11 @@ CSS SITEMAP >>>>
 /*==============================================
 02. Large desktops and smaller (e.g., standard desktop monitors, laptops).
 ================================================*/
+@media only screen and (min-width: 1440px) {
+	.about-pic-above-text {
+		display: none;
+	}
+}
 
 @media only screen and (max-width: 1440px) {
 	.welcome-title {
@@ -92,8 +99,14 @@ CSS SITEMAP >>>>
 	.gallery-section {
 		padding-top: 10px;
 	}
+
 	.about-img {
 		margin-right: 15px;
+	}
+	.about-pic-above-text {
+		display: none;
+	}
+	.about-pic-right {
 	}
 }
 
@@ -270,68 +283,11 @@ CSS SITEMAP >>>>
 	#logo {
 		color: white;
 	}
-	.navbar-toggle {
-		padding: 0;
-		margin: 0;
-		color: #fff;
-		font-size: 28px;
-		position: absolute;
-		right: 0;
-		top: 50%;
-		background: none;
-		-webkit-transform: translateY(-50%);
-		transform: translateY(-50%);
-		display: block;
-		box-shadow: none;
-		border: 0;
-		outline: none;
-		cursor: pointer;
-	}
+
 	#header {
 		padding: 0;
 	}
-	.navbar {
-		padding: 15px 0;
-	}
-	.navbar-toggle:focus {
-		outline: none;
-	}
-	.navbar-nav {
-		margin: 0;
-	}
-	.collapse:not(.show) {
-		display: none;
-	}
-	.navigation-menu > li {
-		display: block;
-		margin: 0;
-		font-size: 15px;
-		text-align: center;
-	}
-	.navigation-menu > li > a {
-		color: #222;
-		padding: 15px;
-		line-height: 1.2;
-	}
-	.navbar-nav {
-		overflow-y: auto;
-		display: block;
-		background: rgba(230, 230, 230, 0.25);
-	}
-	.navbar-nav li a:after {
-		display: none;
-	}
-	.nav-box {
-		position: absolute;
-		left: -15px;
-		right: -15px;
-		border: 0;
-		box-shadow: none;
-		background: #fff;
-		text-align: left;
-		top: 100%;
-		display: none;
-	}
+
 	.welcome-title {
 		font-size: 60px;
 		margin-bottom: 20px;
@@ -412,6 +368,12 @@ CSS SITEMAP >>>>
 	}
 	.project-buttons-margin {
 		margin-top: 50px;
+	}
+	.about-pic-above-text {
+		display: block;
+	}
+	.about-pic-right {
+		display: none;
 	}
 }
 

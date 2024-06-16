@@ -1,0 +1,32 @@
+* {
+	/* border: 1px red dotted; */
+}
+
+.contact-row input[type="text"],
+.contact-row input[type="password"] {
+	background-color: transparent;
+	padding: 8px;
+	border-radius: 5px;
+	width: 100%;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+	color: white;
+}
+
+.login-btn {
+	background: rgba(0, 0, 0, 0.25);
+	border: 1px solid #428713;
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.login-btn:hover {
+	background-color: #428713;
+}
+
+.content {
+	padding: 20px;
+	margin: 10px;
+}

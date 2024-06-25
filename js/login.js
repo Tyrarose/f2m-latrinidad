@@ -19,10 +19,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		const username = loginForm.elements["username"].value;
 		const password = loginForm.elements["password"].value;
-		const rememberDevice = loginForm.elements["remember-device"].checked;
 
 		const enteredHashedUsername = await sha256(username);
 		const enteredHashedPassword = await sha256(password);
+
+		console.log("hash of: " + sha256("root"));
+		console.log("haso of root: " + sha256("root"));
+		console.log("hash of philsea:" + sha256("westphilsea24"));
+		console.log("hast of philsea: " + sha256("westphilsea24"));
 
 		if (
 			enteredHashedUsername ===
@@ -30,16 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
 			enteredHashedPassword ===
 				"3e6fd5113ecec40c8a8cc8e250ef76dc1080dc5325ded148d6a13740f90143a8"
 		) {
-			sessionStorage.setItem("loggedIn", "true");
-
-			if (rememberDevice) {
-				localStorage.setItem("username", username);
-				localStorage.setItem("password", password);
-			} else {
-				localStorage.removeItem("username");
-				localStorage.removeItem("password");
-			}
-
 			window.location.href = "publish.html";
 		} else {
 			alert("Invalid username or password!");
@@ -58,7 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		if (storedUsername && storedPassword) {
 			loginForm.elements["username"].value = storedUsername;
 			loginForm.elements["password"].value = storedPassword;
-			loginForm.elements["remember-device"].checked = true;
 		}
 	}
 

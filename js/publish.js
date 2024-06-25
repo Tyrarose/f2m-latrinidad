@@ -1,4 +1,9 @@
-import database from "./firebaseConfig.mjs";
+import { firebaseConfig } from "./firebaseConfig.mjs";
+
+firebase.initializeApp(firebaseConfig);
+
+// Get a reference to the Firebase Database
+const database = firebase.database();
 
 function extractIframeSrc(embed) {
 	// Create a temporary DOM element to parse the HTML
@@ -36,9 +41,12 @@ form.addEventListener("submit", (e) => {
 		})
 		.then(() => {
 			alert("Data saved successfully!");
-			form.reset();
+			window.location.href = "videos.html";
+			e.preventDefault();
 		})
 		.catch((error) => {
 			alert("Error saving data: " + error);
+			console.log("Error saving data: " + error);
+			e.preventDefault();
 		});
 });

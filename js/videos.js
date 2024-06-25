@@ -57,20 +57,25 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function createFeaturedVideo(video) {
+	const featuredContainer = document.getElementById("featuredContainer");
+	const contentInfo = document.getElementById("contentInfo");
+
 	const iframe = document.createElement("iframe");
 	iframe.src = video.embed;
-	iframe.width = "100%";
-	iframe.height = "476";
+	iframe.style.width = "100%";
+	iframe.style.height = "476";
 	iframe.scrolling = "no";
 	iframe.frameBorder = "0";
 	iframe.allowFullscreen = true;
 	iframe.allow =
 		"autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share";
-	iframe.controls = true;
+
 	featuredContainer.appendChild(iframe);
+
 	const title = document.createElement("h2");
 	title.textContent = video.title;
 	contentInfo.appendChild(title);
+
 	const description = document.createElement("p");
 	description.textContent = video.description;
 	contentInfo.appendChild(description);

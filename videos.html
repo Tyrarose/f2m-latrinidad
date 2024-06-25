@@ -20,10 +20,6 @@
 			href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900"
 			rel="stylesheet"
 		/>
-		<link
-			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-			rel="stylesheet"
-		/>
 
 		<title>F2M La Trinidad</title>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
@@ -36,7 +32,23 @@
 	</head>
 
 	<body>
-		<div id="background">
+		<div id="fb-root"></div>
+		<script
+			async
+			defer
+			crossorigin="anonymous"
+			src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v20.0&appId=1261755284789606"
+			nonce="6VjtSkSl"
+		></script>
+		<div id="video">
+			<div class="preloader">
+				<div class="preloader-bounce">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+
 			<header id="header">
 				<div class="container-blur">
 					<div class="container-fluid">
@@ -74,37 +86,25 @@
 
 			<div id="fullpage" class="fullpage-default" data-section="slide01">
 				<div class="section animated-row custom-bg-pic-color">
-					<div class="section-inner d-flex justify-content-center">
-						<div class="col-8 welcome-box mx-auto">
-							<span class="welcome-first mx-3 my-4"
-								><h2 class="welcome-title">
-									Latest Post
-								</h2></span
+					<div class="section-inner">
+						<div class="welcome-box">
+							<span class="welcome-first mx-3 my-4 mt-5"
+								><h2 class="mt-5">Latest Post</h2></span
 							>
 							<div
 								class="row d-flex align-items-center justify-content-center"
 							>
 								<div
-									class="col-md-5 col-sm-12 featured-container d-flex justify-content-center"
+									id="featuredContainer"
+									class="col-md-2 col-sm-12 featured-container d-flex justify-content-center"
 								>
-									<iframe
-										src="https://www.facebook.com/plugins/video.php?&href=https%3A%2F%2Fwww.facebook.com%2F100054357139017%2Fvideos%2F774100108041193%2F&show_text=false&t=0"
-										frameborder="0"
-										allowfullscreen="true"
-										allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-									></iframe>
+									<!-- Video will be injected here -->
 								</div>
 								<div
-									class="col-md-7 col-sm-12 content-info d-flex flex-column align-items-center"
+									id="contentInfo"
+									class="col-md-3 col-sm-12 content-info d-flex flex-column align-items-center mt-2"
 								>
-									<h1>New Member Julie!</h1>
-									<p>
-										Limma nga biik, SOLD to our new member
-										julie! Lorem ipsum dolor sit, amet
-										consectetur adipisicing elit. Possimus,
-										officia sint autem ea explicabo est eum
-										voluptate sunt?
-									</p>
+									<!-- Content will be injected here -->
 								</div>
 							</div>
 						</div>
@@ -113,7 +113,7 @@
 
 				<div class="section animated-row slide-two">
 					<div class="section-inner">
-						<div class="welcome-box">
+						<div class="">
 							<span class="welcome-first mx-3 my-4"
 								><h2>
 									<span class="black-text"
@@ -123,7 +123,107 @@
 								</h2>
 							</span>
 							<div class="container">
-								<div class="row" id="videoGrid"></div>
+								<div class="row" id="videoGrid1"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="section animated-row slide-two">
+					<div class="section-inner">
+						<div class="about-section">
+							<div class="row justify-content-center">
+								<div class="col-lg-8 wide-col-laptop">
+									<div class="container">
+										<div class="row" id="videoGrid2"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="section animated-row custom-bg-pic-color">
+					<div class="section-inner">
+						<div class="about-section">
+							<div class="row justify-content-center">
+								<div class="col-lg-8 wide-col-laptop">
+									<div class="container">
+										<div class="col-sm-12">
+											<div
+												class="welcome-first mx-3 my-4"
+											>
+												<h2>
+													Follow Us on Social Media
+												</h2>
+												<p>
+													Stay updated with our latest
+													news and events!
+												</p>
+											</div>
+										</div>
+										<div
+											class="row justify-content-center iframe-container"
+										>
+											<div class="col-md-6 col-sm-12">
+												<div class="services-section">
+													<div
+														class="services-list owl-carousel"
+													>
+														<div
+															class="item animate"
+															data-animate="fadeInUp"
+														>
+															<a
+																href="https://www.facebook.com/joe.tumapang.69?mibextid=ZbWKwL"
+																title="Facebook"
+																target="_blank"
+																><div
+																	class="service-box"
+																>
+																	<span
+																		class="service-icon"
+																		><i
+																			class="fa fa-facebook"
+																			aria-hidden="true"
+																		></i
+																	></span>
+																	<h3>
+																		Facebook
+																	</h3>
+																</div></a
+															>
+														</div>
+														<div
+															class="item animate"
+															data-animate="fadeInUp"
+														>
+															<a
+																href="https://www.youtube.com/results?search_query=Wonderboy-Farm+To+Market"
+																title="Facebook"
+																target="_blank"
+																><div
+																	class="service-box"
+																>
+																	<span
+																		class="service-icon"
+																		><i
+																			class="fa fa-youtube"
+																			aria-hidden="true"
+																		></i
+																	></span>
+																	<h3>
+																		Youtube
+																	</h3>
+																</div></a
+															>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -155,20 +255,23 @@
 														<i
 															class="fa fa-map-marker"
 														></i>
-														3rd Floor Tokiko Bldg
-														Km5 La-Trinidad Benguet
+														Visit us at &nbsp;3rd
+														Floor Tokiko Bldg Km5
+														La-Trinidad Benguet
 													</div>
 												</a>
 												<a
 													href="data/tyraclemente.vcf"
 													class="save-contact-button"
-													download="tyraclemente.vcf"
+													download="f2mlatrinidad.vcf"
 												>
 													<div class="contact-row">
 														<i
 															class="fa fa-phone"
 														></i>
-														0908 567 1746
+														Call or text us at
+														&nbsp;+6396 &nbsp; 6175
+														&nbsp; 0408
 													</div></a
 												>
 
@@ -180,7 +283,9 @@
 														<i
 															class="fa fa-facebook"
 														></i>
-														Wonderboy Tumapang
+														Message us on Facebook
+														at &nbsp;Wonderboy
+														Tumapang
 													</div>
 												</a>
 											</div>
@@ -225,6 +330,7 @@
 				</div>
 			</div>
 		</div>
+
 		<script
 			async
 			defer
@@ -235,7 +341,8 @@
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
 
 		<script src="js/jquery.js"></script>
 
@@ -253,6 +360,6 @@
 
 		<script src="js/custom.js"></script>
 
-		<script src="/js/videos.js"></script>
+		<script type="module" src="/js/videos.js"></script>
 	</body>
 </html>

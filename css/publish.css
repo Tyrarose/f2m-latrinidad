@@ -1,0 +1,10 @@
+.custom-bg-pic-color {
+	background-image: url("/images/videos-bg.jpg");
+
+	background: linear-gradient(rgba(28, 68, 0, 0.7), rgba(28, 68, 0, 0.7)),
+		url("/images/videos-bg.jpg");
+
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}

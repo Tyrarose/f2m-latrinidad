@@ -30,6 +30,7 @@ body {
 	-ms-font-smoothing: antialiased;
 	font-smoothing: antialiased;
 	-webkit-text-size-adjust: 100%;
+	overflow-y: scroll;
 }
 body {
 	font:
@@ -39,7 +40,6 @@ body {
 		sans-serif;
 	color: #fff;
 	text-align: center;
-	background: rgb(109, 194, 109);
 }
 img {
 	border: 0;
@@ -343,8 +343,8 @@ a#logo {
 
 /* Default for larger screens */
 .logoimg {
-	width: 13vh;
-	padding: 10px;
+	width: 65px;
+	padding: 5px;
 }
 
 .navbar {
@@ -517,7 +517,7 @@ Old videos BLOCK CSS
 ================================================*/
 
 .slide-two {
-	background-color: rgb(167, 199, 171);
+	background-color: rgb(240, 245, 240);
 }
 
 .slide-two > * {
@@ -590,6 +590,9 @@ Old videos BLOCK CSS
 	margin: 12px 0;
 }
 .contact-row {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		"Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -615,27 +618,102 @@ Old videos BLOCK CSS
 	padding-right: 30px;
 }
 
-/* ////////////////////////// */
-
-.video-container {
+.video-content {
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
+	flex-direction: column;
+	height: 100%;
 }
 
-.video-item {
-	width: calc(12.5% - 20px);
-	box-sizing: border-box;
+.imthefbvideo {
+	margin-top: auto;
 }
 
-.video-description {
-	font-size: 12px;
+.iframe-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* height: 70vh; */
 }
 
-.video-iframe {
+.responsive-iframe {
 	width: 100%;
-	height: 100px;
+	/* height: 50vh; */
+	aspect-ratio: 4/3;
 	border: none;
-	overflow: hidden;
-	scrolling: no;
+}
+
+/*==============================================
+06. SERVICES BLOCK CSS
+================================================*/
+.title-block {
+	margin-bottom: 40px;
+}
+.title-block span {
+	font-size: 24px;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+.services-list .item {
+	padding: 20px;
+	margin: 15px;
+	background: #00000040;
+	border-radius: 10px;
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+.service-icon {
+	display: block;
+	margin: 0 auto 0;
+	font-size: 64px;
+}
+.service-box {
+	font-size: 15px;
+	padding: 40px 20px;
+	height: 100%;
+}
+.services-list .item:hover {
+	background-color: #fff;
+}
+
+.services-list > * :hover {
+	color: black;
+}
+
+.service-box h3 {
+	font-size: 22px;
+	font-weight: 700;
+	text-transform: capitalize;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+.service-box p:last-child {
+	margin: 0;
+}
+.owl-carousel .owl-dots .owl-dot {
+	border-radius: 3px;
+}
+.owl-dots {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	margin-top: 50px;
+}
+
+.owl-carousel .owl-dots .owl-dot {
+	width: 12px;
+	height: 12px;
+	margin: 0 5px;
+	background: rgba(255, 255, 255, 0.2);
+}
+
+.owl-carousel .owl-dots .owl-dot:focus {
+	outline: none;
+}
+
+.owl-carousel .owl-dots .owl-dot.active {
+	background: #fff;
 }

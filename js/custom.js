@@ -14,17 +14,9 @@
 			var screensize = window.matchMedia(
 				"(max-width:" + mediasize + "px)"
 			);
-			if (screensize.matches) {
-				return true;
-			} else {
-				return false;
-			}
+			return screensize.matches;
 		} else {
-			if ($winW() <= mediasize) {
-				return true;
-			} else {
-				return false;
-			}
+			return $winW() <= mediasize;
 		}
 	};
 
@@ -172,7 +164,7 @@
 			.on("click", ".side-menu .navbar-nav li a", function () {
 				$("body").removeClass("sidemenu-open");
 			});
-		// Add your counter animation script here
+
 		$(window).scroll(function () {
 			if (visible($(".count-digit"))) {
 				if ($(".count-digit").hasClass("counter-loaded")) return;
@@ -193,12 +185,16 @@
 				});
 			}
 		});
+
+		if (window.history && window.history.pushState) {
+			// window.history.pushState(null, null, "/");
+		}
 	});
 })(jQuery, window, document);
 
 const currentYear = new Date().getFullYear();
 document.getElementById("footer-text").innerHTML =
 	`&copy; ${currentYear} Farm to Market La Trinidad - 
-	Designed and Developed by 
-	<a href="https://www.linkedin.com/in/tyraclemente/" target="_blank" style="text-decoration: underline;">Tyra</a> 
-	with <a href="https://www.linkedin.com/in/tyraxl-joe-sabino-35666929b/" target="_blank" style="text-decoration: underline;">Tyraxl</a>`;
+    Designed and Developed by 
+    <a href="https://www.linkedin.com/in/tyraclemente/" target="_blank" style="text-decoration: underline;">Tyra</a> 
+    with <a href="https://www.linkedin.com/in/tyraxl-joe-sabino-35666929b/" target="_blank" style="text-decoration: underline;">Tyraxl</a>`;

@@ -30,10 +30,11 @@
 		<link rel="stylesheet" href="css/home.css" />
 		<link rel="stylesheet" href="css/home-responsive.css" />
 		<link rel="stylesheet" href="css/login.css" />
+		<link rel="stylesheet" href="css/publish.css" />
 	</head>
 
 	<body>
-		<div id="video">
+		<div class="custom-bg-pic-color">
 			<header id="header">
 				<div class="container-blur">
 					<div class="container-fluid">
@@ -64,10 +65,6 @@
 				</div>
 			</header>
 
-			<video autoplay muted loop id="myVideo" class="videobg">
-				<source src="images/video-bg.mp4" type="video/mp4" />
-			</video>
-
 			<div id="fullpage" class="fullpage-default" data-section="">
 				<div class="section animated-row">
 					<div class="">
@@ -81,7 +78,7 @@
 											data-animate="fadeInUp"
 										>
 											<div class="contact-box">
-												<form id="publishForm">
+												<form id="dataForm">
 													<h2>Publish a video</h2>
 													<div class="contact-row">
 														<i
@@ -89,21 +86,21 @@
 														></i>
 														<input
 															type="text"
-															placeholder="Title"
-															name="title"
-															id="title"
+															class="form-control"
+															id="titleInput"
+															placeholder="Enter title"
 														/>
 													</div>
 													<div class="contact-row">
 														<i
 															class="fa fa-comment"
 														></i>
-														<input
-															type="text"
-															placeholder="Description"
-															name="description"
-															id="description"
-														/>
+														<textarea
+															class="form-control"
+															id="descriptionInput"
+															rows="3"
+															placeholder="Enter description"
+														></textarea>
 													</div>
 
 													<img
@@ -121,12 +118,12 @@
 														<i
 															class="fa fa-video-camera"
 														></i>
-														<input
+														<textarea
 															type="text"
-															placeholder="Embed link"
-															name="embedLink"
-															id="embedLink"
-														/>
+															class="form-control"
+															id="embedInput"
+															placeholder="Enter embed link"
+														></textarea>
 													</div>
 													<p
 														style="
@@ -171,6 +168,10 @@
 			</div>
 		</div>
 
+		<!-- Firebase SDK -->
+		<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
+
 		<script src="js/jquery.js"></script>
 
 		<script src="js/bootstrap.min.js"></script>
@@ -187,6 +188,5 @@
 
 		<script src="js/custom.js"></script>
 		<script src="js/publish.js"></script>
-		<script src="js/server.js"></script>
 	</body>
 </html>

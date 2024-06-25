@@ -3,7 +3,8 @@
 }
 
 .contact-row input[type="text"],
-.contact-row input[type="password"] {
+.contact-row input[type="password"],
+.contact-row textarea {
 	background-color: transparent;
 	padding: 8px;
 	border-radius: 5px;
@@ -11,6 +12,17 @@
 	box-sizing: border-box;
 	margin-bottom: 10px;
 	color: white;
+}
+
+.contact-row textarea:focus {
+	background-color: transparent;
+	padding: 8px;
+	border-radius: 5px;
+	width: 100%;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+	color: white;
+	outline: none;
 }
 
 .login-btn {

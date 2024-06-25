@@ -23,11 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		const enteredHashedUsername = await sha256(username);
 		const enteredHashedPassword = await sha256(password);
 
-		console.log("hash of: " + sha256("root"));
-		console.log("haso of root: " + sha256("root"));
-		console.log("hash of philsea:" + sha256("westphilsea24"));
-		console.log("hast of philsea: " + sha256("westphilsea24"));
-
 		if (
 			enteredHashedUsername ===
 				"4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2" &&
@@ -44,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	// Check if user is already logged in
 	const isLoggedIn = sessionStorage.getItem("loggedIn");
 	if (isLoggedIn === "true") {
-		window.location.href = "publish.html";
+		window.location.href = "lakay.html";
 	} else {
 		// Check if user's credentials are stored in localStorage
 		const storedUsername = localStorage.getItem("username");

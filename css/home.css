@@ -348,7 +348,7 @@ a#logo {
 }
 
 .navbar {
-	padding: 0;
+	padding-top: 0;
 }
 .navbar-toggle {
 	display: none;

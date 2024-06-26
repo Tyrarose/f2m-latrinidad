@@ -40,7 +40,7 @@ form.addEventListener("submit", (e) => {
 			embed: iframeSrc,
 		})
 		.then(() => {
-			alert("Data saved successfully!");
+			alert("Video Uploaded!");
 			window.location.href = "videos.html";
 			e.preventDefault();
 		})

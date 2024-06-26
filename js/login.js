@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			enteredHashedPassword ===
 				"3e6fd5113ecec40c8a8cc8e250ef76dc1080dc5325ded148d6a13740f90143a8"
 		) {
-			window.location.href = "publish.html";
+			window.location.href = "lakay.html";
 		} else {
 			alert("Invalid username or password!");
 			loginForm.reset();

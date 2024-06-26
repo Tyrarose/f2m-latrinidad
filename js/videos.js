@@ -76,9 +76,9 @@ function createFeaturedVideo(video) {
 	title.textContent = video.title;
 	contentInfo.appendChild(title);
 
-	const description = document.createElement("p");
-	description.textContent = video.description;
-	contentInfo.appendChild(description);
+	// const description = document.createElement("p");
+	// description.textContent = video.description;
+	// contentInfo.appendChild(description);
 }
 
 function createVideoGrid1(video) {

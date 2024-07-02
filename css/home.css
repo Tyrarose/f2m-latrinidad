@@ -370,7 +370,7 @@ a#logo {
 }
 .navbar-nav li a {
 	color: #fff;
-	font-size: 15px;
+	font-size: 20px;
 	text-decoration: none;
 	display: block;
 	font-weight: 500;
@@ -454,9 +454,9 @@ a#logo {
 	letter-spacing: 0.02em;
 }
 .welcome-box p {
-	max-width: 620px;
+	max-width: 60%;
 	width: 100%;
-	margin: 0 auto 30px;
+	margin: 0 auto;
 	color: #fff;
 }
 .welcome-title {
@@ -471,6 +471,7 @@ a#logo {
 	font-weight: 300;
 	line-height: 1.2;
 }
+
 .welcome-box .btn {
 	margin-top: 10px;
 }
@@ -495,6 +496,54 @@ a#logo {
 	opacity: 1;
 }
 
+.welcome-list .item {
+	padding: 20px;
+	margin: 15px;
+	background: #00000040;
+	border-radius: 10px;
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+.welcome-list .item:hover {
+	background-color: #fff;
+	color: #1e1e1e;
+}
+
+.welcome-list .item .service-box:hover {
+	color: #1e1e1e;
+}
+
+.welcome-list .item {
+	padding: 20px;
+	margin: 15px;
+	background: #00000040;
+	border-radius: 10px;
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.welcome-list .item h6 {
+	font-size: medium;
+}
+
+.content-how {
+	backdrop-filter: blur(15px);
+	background-color: rgba(255, 255, 255, 0.09);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+	padding: 20px;
+	color: white;
+	-webkit-backdrop-filter: blur(10px);
+	margin-bottom: 38px;
+}
+
+.item-box {
+	backdrop-filter: blur(15px);
+	background-color: rgba(255, 255, 255, 0.05);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+	padding: 10px;
+	color: white;
+	-webkit-backdrop-filter: blur(10px);
+}
 /*==============================================
 MAP CSS
 ================================================*/
@@ -521,6 +570,11 @@ iframe {
 	box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
 	height: 380px;
 	width: auto;
+}
+
+.office-p {
+	font-size: large;
+	margin-bottom: 16px;
 }
 
 .about-contentbox {
@@ -598,6 +652,11 @@ iframe {
 	-webkit-transition: all 0.5s ease;
 	transition: all 0.5s ease;
 }
+.services-list .item:hover {
+	background-color: #fff;
+	color: #1e1e1e;
+}
+
 .service-icon {
 	display: block;
 	margin: 0 auto 0;
@@ -608,10 +667,7 @@ iframe {
 	padding: 40px 20px;
 	height: 100%;
 }
-.services-list .item:hover {
-	background-color: #fff;
-	color: #1e1e1e;
-}
+
 .service-box h3 {
 	font-size: 22px;
 	font-weight: 700;

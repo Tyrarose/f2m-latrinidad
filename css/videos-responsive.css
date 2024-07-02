@@ -22,6 +22,9 @@ CSS SITEMAP >>>>
 ================================================*/
 
 @media only screen and (min-width: 768px) {
+	.brandname {
+		font-size: 16px;
+	}
 	.nav-box {
 		display: block !important;
 		height: auto !important;
@@ -36,6 +39,9 @@ CSS SITEMAP >>>>
 02. Large desktops and smaller (e.g., standard desktop monitors, laptops).
 ================================================*/
 @media only screen and (min-width: 1440px) {
+	.brandname {
+		font-size: 18px;
+	}
 	.about-pic-above-text {
 		display: none;
 	}
@@ -291,6 +297,9 @@ CSS SITEMAP >>>>
 	.logoimg {
 		width: 10vh;
 	}
+	.brandname {
+		font-size: 14px;
+	}
 	.welcome-box {
 		padding: 0px;
 	}
@@ -472,11 +481,17 @@ CSS SITEMAP >>>>
 	h4 {
 		font-size: 14px;
 	}
+	.brandname {
+		display: none;
+	}
 	.testimonial-content:before {
 		left: 45%;
 	}
 }
 @media only screen and (max-width: 320px) {
+	.brandname {
+		display: none;
+	}
 	.gallery-overlay p {
 		display: none;
 	}

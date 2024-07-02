@@ -341,7 +341,6 @@ a#logo {
 	font-weight: 700;
 }
 
-/* Default for larger screens */
 .logoimg {
 	width: 65px;
 	padding: 5px;
@@ -370,7 +369,7 @@ a#logo {
 }
 .navbar-nav li a {
 	color: #fff;
-	font-size: 15px;
+	font-size: 20px;
 	text-decoration: none;
 	display: block;
 	font-weight: 500;

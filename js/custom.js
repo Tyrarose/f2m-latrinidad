@@ -44,6 +44,36 @@
 				});
 			});
 		});
+		if ($(".welcome-list").length) {
+			$(".welcome-list").owlCarousel({
+				loop: true,
+				nav: false,
+				dots: true,
+				items: 3,
+				margin: 10,
+				autoplay: false,
+				smartSpeed: 700,
+				autoplayTimeout: 6000,
+				responsive: {
+					0: {
+						items: 1,
+						margin: 0,
+					},
+					460: {
+						items: 1,
+						margin: 0,
+					},
+					576: {
+						items: 3,
+						margin: 10,
+					},
+					992: {
+						items: 3,
+						margin: 10,
+					},
+				},
+			});
+		}
 		if ($(".facts-list").length) {
 			$(".facts-list").owlCarousel({
 				loop: true,

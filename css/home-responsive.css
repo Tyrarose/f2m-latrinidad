@@ -465,6 +465,15 @@ CSS SITEMAP >>>>
 	.testimonial-content:before {
 		left: 45%;
 	}
+	.navbar-nav li a {
+		font-size: 18px;
+	}
+	.line {
+		border: 1px rgba(255, 255, 255, 0.333) solid;
+		margin-bottom: 30px;
+		width: 50vh;
+		height: 0px;
+	}
 }
 @media only screen and (max-width: 320px) {
 	.brandname {

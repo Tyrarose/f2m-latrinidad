@@ -443,6 +443,7 @@ a#logo {
 	font-size: 20px;
 	line-height: 1.7;
 	text-align: center;
+	margin-top: 12vh;
 }
 
 .welcome-first {
@@ -543,6 +544,12 @@ a#logo {
 	padding: 10px;
 	color: white;
 	-webkit-backdrop-filter: blur(10px);
+}
+
+.line {
+	border: 1px rgba(255, 255, 255, 0.333) solid;
+	margin: 0vw 2vw;
+	height: 50vh;
 }
 /*==============================================
 MAP CSS

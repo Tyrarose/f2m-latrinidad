@@ -487,6 +487,9 @@ CSS SITEMAP >>>>
 	.testimonial-content:before {
 		left: 45%;
 	}
+	.navbar-nav li a {
+		font-size: 18px;
+	}
 }
 @media only screen and (max-width: 320px) {
 	.brandname {

@@ -1,3 +1,16 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+import {
+	getAuth,
+	signInWithEmailAndPassword,
+} from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
+import { getDatabase } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js";
+import { firebaseConfig } from "./firebaseConfig.mjs";
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const database = getDatabase(app);
+
 document.addEventListener("DOMContentLoaded", function () {
 	const passwordInput = document.getElementById("password-input");
 	const showPasswordButton = document.getElementById("show-password");
@@ -14,26 +27,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	const loginForm = document.getElementById("login-form");
 
-	loginForm.addEventListener("submit", async function (event) {
+	loginForm.addEventListener("submit", function (event) {
 		event.preventDefault();
 
-		const username = loginForm.elements["username"].value;
+		const email = loginForm.elements["username"].value;
 		const password = loginForm.elements["password"].value;
 
-		const enteredHashedUsername = await sha256(username);
-		const enteredHashedPassword = await sha256(password);
+		signInWithEmailAndPassword(auth, email, password)
+			.then((userCredential) => {
+				// Successfully signed in
+				sessionStorage.setItem("loggedIn", "true");
+				window.location.href = "lakay.html";
+			})
+			.catch((error) => {
+				const errorCode = error.code;
+				const errorMessage = error.message;
+				console.log(errorCode);
+				console.log(errorMessage);
 
-		if (
-			enteredHashedUsername ===
-				"4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2" &&
-			enteredHashedPassword ===
-				"3e6fd5113ecec40c8a8cc8e250ef76dc1080dc5325ded148d6a13740f90143a8"
-		) {
-			window.location.href = "lakay.html";
-		} else {
-			alert("Invalid username or password!");
-			loginForm.reset();
-		}
+				alert(`Incorrect login details. Try again.`);
+				loginForm.reset();
+			});
 	});
 
 	// Check if user is already logged in
@@ -42,21 +56,11 @@ document.addEventListener("DOMContentLoaded", function () {
 		window.location.href = "lakay.html";
 	} else {
 		// Check if user's credentials are stored in localStorage
-		const storedUsername = localStorage.getItem("username");
+		const storedEmail = localStorage.getItem("username");
 		const storedPassword = localStorage.getItem("password");
-		if (storedUsername && storedPassword) {
-			loginForm.elements["username"].value = storedUsername;
+		if (storedEmail && storedPassword) {
+			loginForm.elements["username"].value = storedEmail;
 			loginForm.elements["password"].value = storedPassword;
 		}
-	}
-
-	async function sha256(message) {
-		const encoder = new TextEncoder();
-		const data = encoder.encode(message);
-		const hashBuffer = await crypto.subtle.digest("SHA-256", data);
-		const hashArray = Array.from(new Uint8Array(hashBuffer));
-		return hashArray
-			.map((byte) => byte.toString(16).padStart(2, "0"))
-			.join("");
 	}
 });

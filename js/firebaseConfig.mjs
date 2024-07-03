@@ -20,7 +20,7 @@ const hashedMeasurementId = "3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c";
 
 // Export the hashed Firebase config
 export const firebaseConfig = {
-	apiKey: hashedApiKey,
+	apiKey: "AIzaSyBIvpv8iLn7dJ3rA6cTo00rmR0gLkf550E",
 	authDomain: hashedAuthDomain,
 	databaseURL:
 		"https://f2m-latrinidad-default-rtdb.asia-southeast1.firebasedatabase.app",

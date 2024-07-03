@@ -54,6 +54,6 @@ onAuthStateChanged(auth, (user) => {
 		});
 	} else {
 		// User is not authenticated, redirect to login page
-		window.location.href = "login.html";
+		window.location.href = "utf.html";
 	}
 });

@@ -256,6 +256,36 @@ CSS SITEMAP >>>>
 	}
 }
 
+@media only screen and (min-width: 640px) {
+	.welcome-first {
+		font-size: 18px;
+	}
+	.welcome-title {
+		font-size: 70px;
+	}
+	.subtitle {
+		font-size: 16px;
+	}
+	.welcome-boxes {
+	}
+	.content-how {
+		font-size: 14px;
+		height: 307px;
+	}
+	.line {
+		height: 307px;
+	}
+	.welcome-featured-boxes {
+		height: 280px;
+	}
+	.welcome-featured-boxes h3 {
+		font-size: 14px !important;
+	}
+	.welcome-featured-boxes h6 {
+		font-size: 12px !important;
+	}
+}
+
 /*==============================================
 05. Tablets and smaller (e.g., tablets in portrait mode, large smartphones in landscape mode).
 ================================================*/
